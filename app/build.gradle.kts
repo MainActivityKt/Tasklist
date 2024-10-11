@@ -26,6 +26,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    // This dependency is used for kotlinx datetime library
+    implementation(libs.kotlinx.datetime)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
