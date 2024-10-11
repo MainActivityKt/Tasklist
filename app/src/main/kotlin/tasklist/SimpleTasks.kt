@@ -2,7 +2,7 @@ package tasklist
 
 import java.util.Scanner
 
-fun printTasks(taskList: List<String>) {
+private fun printTasks(taskList: List<String>) {
     if (taskList.isEmpty()) {
         println("No tasks have been input")
     } else {
