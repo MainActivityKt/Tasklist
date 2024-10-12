@@ -1,4 +1,4 @@
-package utils
+package tasklist.determinedTasks
 
 data class Task(val number: Int, val lines: List<String>) {
     override fun toString(): String {

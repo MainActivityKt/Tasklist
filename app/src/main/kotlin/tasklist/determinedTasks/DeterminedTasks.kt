@@ -1,7 +1,6 @@
-package tasklist
+package tasklist.determinedTasks
 
 import utils.Option
-import utils.Task
 import java.util.Scanner
 
 class DeterminedTasks {
