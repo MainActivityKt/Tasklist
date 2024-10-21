@@ -1,5 +1,5 @@
 package utils
 
 enum class Option {
-    ADD, PRINT, END;
+    ADD, PRINT, EDIT, DELETE, END;
 }

@@ -1,14 +1,11 @@
 package tasklist.punctualTasks
 
-import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.format.DateTimeFormat
 import utils.Option
 import utils.Priority
+import utils.isValidDate
+import utils.isValidTime
 import java.util.*
-import kotlin.time.Duration.Companion.days
-
-
 
 class PunctualTasks {
     private val sc = Scanner(System.`in`)
@@ -95,28 +92,6 @@ class PunctualTasks {
         }
         tasksList.forEach(::println)
     }
-}
-
-
-fun String.isValidDate(): Boolean {
-    if (!matches(Regex("\\d{4}-\\d\\d?-\\d\\d?"))) {
-        return false
-    }
-    try {
-        val (year, month, day) = split("-").map { it.toInt() }
-        LocalDate(year, month, day)
-        return true
-    } catch (e: Exception) {
-        return false
-    }
-}
-
-fun String.isValidTime(): Boolean {
-    if(!this.matches(Regex("\\d\\d?:\\d\\d?"))) {
-        return false
-    }
-    val (hour, minute) = split(":").map { it.toInt() }
-    return hour in 0..23 && minute in 0..59
 }
 
 fun main(args: Array<String>) {
