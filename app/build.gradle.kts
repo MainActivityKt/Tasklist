@@ -19,6 +19,9 @@ repositories {
 }
 
 dependencies {
+
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
+
     // Use JUnit Jupiter for testing.
     testImplementation(libs.junit.jupiter)
 

@@ -1,4 +1,4 @@
-package colorfultask
+package tasklist.colorfultasks
 
 import kotlinx.datetime.*
 import utils.*
