@@ -4,14 +4,14 @@ import kotlinx.datetime.*
 import utils.*
 import java.util.Scanner
 
-class ColorfulTaskManager {
+open class ColorfulTaskManager {
     private val sc = Scanner(System.`in`)
     private var isRunning: Boolean = true
-    private val tasksList = mutableListOf<Task>()
+    protected val tasksList = mutableListOf<Task>()
     private val currentDate = Clock.System.now().toLocalDateTime(TimeZone.UTC).date
     private val modifiableFields = arrayOf("priority", "date", "time", "task")
 
-    fun start() {
+    open fun start() {
         while (isRunning) {
             println("Input an action (add, print, edit, delete, end):")
             val input = sc.nextLine()
@@ -42,7 +42,7 @@ class ColorfulTaskManager {
                 daysUntil > 0 -> Tag.I
                 else -> Tag.O
             }
-            tasksList.add(Task(taskLines, taskPriority, taskDate, taskTime, tag))
+            tasksList.add(Task(taskLines, taskPriority, taskDate.toString(), taskTime.toString(), tag))
         }
     }
 
@@ -165,12 +165,12 @@ class ColorfulTaskManager {
             }
             "date" -> {
                 val newDate = getTaskDate()
-                task.date = newDate
+                task.date = newDate.toString()
                 updateTaskTag(task)
             }
             "time" -> {
                 val newTime = getTaskTime()
-                task.time = newTime
+                task.time = newTime.toString()
             }
             "task" -> {
                 val newTaskLines = getTaskLines()
@@ -180,7 +180,7 @@ class ColorfulTaskManager {
     }
 
     private fun updateTaskTag(task: Task) {
-        val daysUntil = currentDate.daysUntil(task.date)
+        val daysUntil = currentDate.daysUntil(LocalDate.parse(task.date))
         val tag = when {
             daysUntil == 0 -> Tag.T
             daysUntil > 0 -> Tag.I

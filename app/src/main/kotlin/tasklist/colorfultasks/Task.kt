@@ -7,8 +7,8 @@ import utils.*
 data class Task(
     var lines: List<String>,
     var priority: Priority,
-    var date: LocalDate,
-    var time: LocalTime,
+    var date: String,
+    var time: String,
     var tag: Tag,
 )
 
