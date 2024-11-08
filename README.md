@@ -4,10 +4,10 @@ Tasklist is a colorful terminal-based program written in kotlin, which helps
 with organizing and managing tasks, and saving them to a Json file.
 
 ## Stage 1/6: Read the list
-What does a task manager need first? Well, tasks, obviously.
+What does a task manager need first? Well, tasks...obviously.
 
-In this stage, the program, when executed, asks the user to input any number of tasks, and prints 
-them out at the end with each task's number, with trailing and leading spaces removed. 
+In this stage, the program when executed, asks the user to input any number of tasks, and prints 
+them out at the end with each task's number next to them, with trailing and leading spaces removed from each line. 
 An empty line denotes the end of tasks.
 
 [Open stage 1 on Hyperskill](https://hyperskill.org/projects/237/stages/1188/implement)
@@ -27,8 +27,7 @@ Stage implementation: [SimpleTasks.kt](app/src/main/kotlin/tasklist/SimpleTasks.
 
 ## Stage 2/6 :The tasklist menu
 
-In this stage, a menu is added to the program to help the user choose what they want. Also, it's now possible to adda a multi-line task.
-
+In this stage, a menu is added to the program to help the user choose what they want. Also, it's now possible to add a multi-line task.
 
 [Open stage 2 on Hyperskill](https://hyperskill.org/projects/237/stages/1189/implement)
 
@@ -127,15 +126,14 @@ Stage implementation: [DeterminedTasks.kt](app/src/main/kotlin/tasklist/determin
 
 ## Stage 3/6: Date and time
 
-Tasks are mote likely to be completed when they have a deadline and a priority. 
+Tasks are more likely to be completed when they have a deadline and a priority. 
 
-In this stage, it's possible to adda a date and time, and a priority to each task.
+In this stage, it's possible to add date, time, and priority to each task.
 
 The priority is just one letter: **C**, **H**, **N**, **L** (case-insensitive) per task that stands for **Critical**, **High**, **Normal**, and **Low**, respectively.
 
 Additionally, the program now takes care of inputting an empty task line, or a wrong date/time. In any of these cases, it'll 
 prompt the user for a new input.
-
 
 [Open stage 3 on Hyperskill](https://hyperskill.org/projects/237/stages/1190/implement)
 
@@ -241,7 +239,7 @@ Stage implementation: [TaskManager.kt](app/src/main/kotlin/tasklist/taskManager/
 
 Everything looks good with some colors.
 
-In this stage, our program is upgraded from a plain text task manager, to one with design and colors.
+In this stage, our program is upgraded from a plain text task manager to one with design and colors.
 
 A task's priority and due tag are represented by defined colors, as follows:
 
@@ -314,7 +312,7 @@ Stage implementation: [ColorfulTaskManager.kt](app/src/main/kotlin/tasklist/colo
     Input an action (add, print, edit, delete, end):
     > print
 
-Prints the following:
+Outputs the following:
 
 <img width="493" alt="output" src="https://github.com/user-attachments/assets/def1daf2-50f1-470b-85f3-30d811604b02">
 
@@ -322,8 +320,10 @@ Prints the following:
 
 In this stage: 
 - When started, the program checks the contents of [tasklist.json](app/src/main/kotlin/tasklist/memorableTaskList/tasklist.json)
-and adds the following tasks if any.
-- When terminated, the program writes the added tasks to the same file.
+and adds the tasks if there are any.
+- When terminated, the program writes the newly added tasks to the same file.
+- Converting tasks list to json, and vice versa, is handled with [Moshi](https://github.com/square/moshi) library
+
 
 [Open stage 6 on Hyperskill](https://hyperskill.org/projects/237/stages/1193/implement)
 
