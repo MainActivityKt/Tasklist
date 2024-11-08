@@ -314,7 +314,8 @@ Stage implementation: [ColorfulTaskManager.kt](app/src/main/kotlin/tasklist/colo
 
 Outputs the following:
 
-<img width="493" alt="output" src="https://github.com/user-attachments/assets/def1daf2-50f1-470b-85f3-30d811604b02">
+![image](https://github.com/user-attachments/assets/d081a922-ef07-4960-a969-95e113450d53)
+
 
 ### Stage 6/6: Save the list
 
