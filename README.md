@@ -323,7 +323,7 @@ In this stage:
 - When started, the program checks the contents of [tasklist.json](app/src/main/kotlin/tasklist/memorableTaskList/tasklist.json)
 and adds the tasks if there are any.
 - When terminated, the program writes the newly added tasks to the same file.
-- Converting tasks list to json, and vice versa, is handled with [Moshi](https://github.com/square/moshi) library
+- Converting tasks list to json, and vice versa, are handled with [Moshi](https://github.com/square/moshi) library
 
 
 [Open stage 6 on Hyperskill](https://hyperskill.org/projects/237/stages/1193/implement)
