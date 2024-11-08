@@ -260,7 +260,7 @@ A task's priority and due tag are represented by defined colors, as follows:
 
 [Open stage 5 on Hyperskill](https://hyperskill.org/projects/237/stages/1192/implement)
 
-Stage implementation: [PunctualTasks.kt](app/src/main/kotlin/tasklist/colorfultasks/ColorfulTaskManager.kt)
+Stage implementation: [ColorfulTaskManager.kt](app/src/main/kotlin/tasklist/colorfultasks/ColorfulTaskManager.kt)
 
 **Example:** normal execution (current day 2024-11-9)
 
@@ -315,5 +315,16 @@ Stage implementation: [PunctualTasks.kt](app/src/main/kotlin/tasklist/colorfulta
     > print
 
 Prints the following:
+
 <img width="493" alt="output" src="https://github.com/user-attachments/assets/def1daf2-50f1-470b-85f3-30d811604b02">
 
+### Stage 6/6: Save the list
+
+In this stage: 
+- When started, the program checks the contents of [tasklist.json](app/src/main/kotlin/tasklist/memorableTaskList/tasklist.json)
+and adds the following tasks if any.
+- When terminated, the program writes the added tasks to the same file.
+
+[Open stage 6 on Hyperskill](https://hyperskill.org/projects/237/stages/1193/implement)
+
+Stage implementation: [MemorableTaskList.kt](app/src/main/kotlin/tasklist/memorableTaskList/MemorableTaskList.kt)
