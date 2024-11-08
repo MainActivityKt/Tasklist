@@ -315,4 +315,5 @@ Stage implementation: [PunctualTasks.kt](app/src/main/kotlin/tasklist/colorfulta
     > print
 
 Prints the following:
+<img width="493" alt="output" src="https://github.com/user-attachments/assets/def1daf2-50f1-470b-85f3-30d811604b02">
 
