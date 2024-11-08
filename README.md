@@ -260,14 +260,14 @@ A task's priority and due tag are represented by defined colors, as follows:
 
 Stage implementation: [ColorfulTaskManager.kt](app/src/main/kotlin/tasklist/colorfultasks/ColorfulTaskManager.kt)
 
-**Example:** normal execution (current day 2024-11-9)
+**Example:** normal execution (current day 2024-11-8)
 
     Input an action (add, print, edit, delete, end):
     > add
     Input the task priority (C, H, N, L):
     > N
     Input the date (yyyy-mm-dd):
-    > 2024-11-9
+    > 2024-11-8
     Input the time (hh:mm):
     > 19:00
     Input a new task (enter a blank line to end):
